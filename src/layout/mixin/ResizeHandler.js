@@ -11,6 +11,7 @@ export default {
       }
     }
   },
+
   beforeMount() {
     window.addEventListener('resize', this.$_resizeHandler)
   },
@@ -24,6 +25,7 @@ export default {
       store.dispatch('app/closeSideBar', { withoutAnimation: true })
     }
   },
+
   methods: {
     // use $_ for mixins properties
     // https://vuejs.org/v2/style-guide/index.html#Private-property-names-essential

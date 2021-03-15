@@ -1,10 +1,10 @@
 <template>
   <div class="login-container">
+    <div class="login-logo" />
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" auto-complete="on" label-position="left">
 
       <div class="title-container">
         <h3 class="title">
-          <span class="login-logo" />
           <span>欢迎登录云卡BOSS系统</span>
         </h3>
       </div>
@@ -176,28 +176,36 @@ $dark_gray:#889aa4;
 $light_gray:#eee;
 
 .login-container {
+  position: relative;
   min-height: 100%;
   width: 100%;
   background-color: $bg;
+  background-image: url('../../assets/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   overflow: hidden;
 
   .login-logo {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-    transform: translateY(15px);
-    background: url('../../assets/logo_1.png') no-repeat;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    background: url('../../assets/logo_2.png') no-repeat;
     background-size: cover;
   }
 
   .login-form {
-    position: relative;
     width: 520px;
     max-width: 100%;
-    padding: 20vh 35px 0;
-    margin: 0 auto;
+    padding: 30px;
+    position: absolute;
+    top: 30vh;
+    right: 50%;
+    transform: translateX(50%);
+    border-radius: 10px;
     overflow: hidden;
+    background: rgba(255,255,255,0.2);
   }
 
   .tips {
